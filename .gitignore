@@ -1,0 +1,17 @@
+.idea/
+.venv/
+Ejemplos_de_MNIST
+fourier/
+imagenet/
+imagenetaprender/
+mini_imagenet/
+./mnist_data/
+my_logs/
+my_logs2/
+Porcelanosa/
+processed_images/
+public/
+test2_images/
+*.js
+*.html
+*.pth
