@@ -1,0 +1,25 @@
+,,,,,,,
+,Nº parametros,Regularizador,Optimizador,Función de Pérdida,Criterios de Parada,Accuracy,Data aumentation
+1,"1,395,594",Dropout: Con 0.1,Adagrad con lr=0.01,CrossEntropyLoss, si no mejora la pérdida de validación durante 2 épocas consecutivas,94.26,SI
+2,"1,395,594",Igual,Igual,Igual, si no mejora la pérdida de validación durante 5 épocas consecutivas,95.45,SI
+3,"1,395,594",Igual,Igual,Igual, si no mejora la pérdida de validación durante 7 épocas consecutivas,,SI
+4,"1,395,594",Igual,Igual,Igual, si no mejora la pérdida de validación durante 10 épocas consecutivas,"97,51",SI
+5,"111,146",Nada,Igual,Igual, si no mejora la pérdida de validación durante 10 épocas consecutivas,90.92,SI
+6,"111,146",Dropout: Con 0.1,Igual,Igual, si no mejora la pérdida de validación durante 10 épocas consecutivas,86.85,SI
+7,"1,395,594",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 10 épocas consecutivas,"97,36",SI
+8,"1,395,594",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 20 épocas consecutivas,"97,7",SI
+9,"1,395,594",Dropout: Con 0.15,Igual,Igual, si no mejora la pérdida de validación durante 20 épocas consecutivas,"97,31",SI
+10,"1,395,594",Dropout: Con 0.15 ,"Adagrad con lr=0.01, weight_decay=0.001",Igual, si no mejora la pérdida de validación durante 20 épocas consecutivas,"11,35",SI
+11,"1,395,594","Dropout: Con 0,2",Adagrad con lr=0.01,Igual, si no mejora la pérdida de validación durante 20 épocas consecutivas,"97,22",SI
+12,"1,395,594",Dropout: Con 0.3,Igual,Igual, si no mejora la pérdida de validación durante 20 épocas consecutivas,"96,94",SI
+13,"1,395,594",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 30 épocas consecutivas,"97,4",SI
+14,"1,395,594",Dropout: Con 0.3,Igual,Igual, si no mejora la pérdida de validación durante 30 épocas consecutivas,"97,22",SI
+15,"1,395,594",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,"97,4",SI
+16,"3,968,778",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,"98,6",SI
+17,"3,968,778",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 20 épocas consecutivas,"97,89",SI
+18,"7,675,658",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,"98,61",SI
+19," 13,969,162",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,"98,71",SI
+20,"50,743,050",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,98.88,SI
+21,"50,743,050",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,97.89,no
+22,"166,229,770",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,99.04,SI
+23,"189,571,850",Dropout: Con 0.25,Igual,Igual, si no mejora la pérdida de validación durante 40 épocas consecutivas,99.02,SI

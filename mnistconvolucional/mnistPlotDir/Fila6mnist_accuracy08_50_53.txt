@@ -1,0 +1,1 @@
+Accuracy del modelo en el conjunto de prueba: 85.07%
