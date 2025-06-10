@@ -11,8 +11,6 @@ import matplotlib.pyplot as plt
 import random
 from torch.utils.data import Dataset, DataLoader
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Utility: reproducibility
 def set_seed(seed: int = 42):
     torch.manual_seed(seed)
     np.random.seed(seed)
@@ -20,8 +18,6 @@ def set_seed(seed: int = 42):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-# ──────────────────────────────────────────────────────────────────────────────
-# PCA-based centering (as before)
 class PCAAlign:
     def __call__(self, img: Image.Image) -> Image.Image:
         arr = np.array(img.convert('L'), dtype=np.float32)
@@ -43,8 +39,7 @@ class PCAAlign:
         rot_deg = 90.0 - angle
         return img.rotate(rot_deg, resample=Image.BILINEAR, fillcolor=0)
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Dataset with optional RandomRotation(360)
+
 class AugmentedMNIST(Dataset):
     def __init__(self, root, train, download, transform):
         self.ds = torchvision.datasets.MNIST(root, train=train, download=download)
@@ -58,8 +53,6 @@ class AugmentedMNIST(Dataset):
         x = self.transform(img)
         return x, lbl
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Simple CNN
 class SimpleCNN(nn.Module):
     def __init__(self):
         super().__init__()
@@ -75,7 +68,6 @@ class SimpleCNN(nn.Module):
         x = F.relu(self.fc1(x))
         return self.fc2(x)
 
-# ──────────────────────────────────────────────────────────────────────────────
 def train_epoch(model, loader, optimizer, criterion, device):
     model.train()
     total_loss = 0
@@ -99,7 +91,6 @@ def eval_accuracy(model, loader, device):
             total += imgs.size(0)
     return correct / total
 
-# ──────────────────────────────────────────────────────────────────────────────
 def main():
     print('hola')
     set_seed(42)
@@ -161,7 +152,6 @@ def main():
         acc_base.append(100 * eval_accuracy(model_b, vb, device))
         acc_aug .append(100 * eval_accuracy(model_a, va, device))
 
-    # Plot
     plt.figure(figsize=(8,5))
     plt.plot(angles, acc_base, '--', label='Baseline')
     plt.plot(angles, acc_aug,  '-',  label='PCA + RandomRotation')
