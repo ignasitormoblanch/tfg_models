@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from torchvision.transforms import ToPILImage
 
-# ──────────────────────────────────────────────────────────────────────────────
+
 def set_seed(seed: int = 42):
     torch.manual_seed(seed)
     np.random.seed(seed)
@@ -92,7 +92,6 @@ def eval_accuracy(model, loader, device):
             total   += lbls.size(0)
     return correct / total
 
-# ──────────────────────────────────────────────────────────────────────────────
 def main():
     set_seed()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -176,7 +175,7 @@ def main():
     plt.legend()
     plt.grid(True)
     plt.savefig("comparison_fourier_logpolar2.png", dpi=150)
-    print("✅ Gráfico guardado en ./comparison_fourier_logpolar2.png")
+    print("Gráfico guardado en ./comparison_fourier_logpolar2.png")
 
 if __name__ == "__main__":
     main()
